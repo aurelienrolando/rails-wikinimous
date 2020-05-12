@@ -1,3 +1,12 @@
+require 'faker'
+
+puts 'Creating 10 fake posts...'
+10.times do
+  post = Article.new(title: Faker::ChuckNorris.fact, content: Faker::ChuckNorris.fact)
+  post.save!
+end
+puts 'Finished!'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
